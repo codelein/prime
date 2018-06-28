@@ -1,9 +1,10 @@
 #include <iostream>
+#include <string>
 #include <cmath>
 
 using namespace std;
 
-void sieve(int n) {
+void sieve(int n) { // Sieve of Eratosthenes
   if(n > 1) {
     bool a[n+1];
 
@@ -31,10 +32,11 @@ void sieve(int n) {
   }
 }
 
-int main() {
+int main(int argc,const char *argv[]) {
   int n;
-  
-  n=100; // Try changing n.
+
+  cout << "Number: ";
+  cin >> n;
   
   sieve(n);
 
