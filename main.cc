@@ -6,7 +6,7 @@ using namespace std;
 /* Sieve of Eratosthenes */
 void sieve(int n) {
   if(n > 1) {
-    bool *a=new bool(a+1);
+    bool *a=new bool[n+1];
 
     for(int i=2; i <= n; i++) {
       a[i]=true; // set all elements to true
