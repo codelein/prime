@@ -26,7 +26,7 @@ void sieve(int n) {
       }
     }
   } else {
-    cerr << "Error: 'n' needs to be an integer greater than 1.";
+    cerr << "Error: 'Number' needs to be an integer greater than 1";
     exit(1);
   }
 }
