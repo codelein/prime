@@ -1,13 +1,21 @@
 #include <iostream>
+#include <string>
 #include <cmath>
+
+#include <getopt.h>
 
 using namespace std;
 
-/* Sieve of Eratosthenes */
-void sieve(int n) {
-  if(n > 1) {
-    bool *a=new bool[n+1];
+enum Parameters {
+  HELP=256,
+  NUMBER
+};
 
+/* Sieve of Eratosthenes */
+void sieve(int n,const char *program) {
+  if(n>1) {
+    bool *a=new bool[n+1];
+    
     for(int i=2; i <= n; i++) {
       a[i]=true; // set all elements to true
     }
@@ -26,18 +34,64 @@ void sieve(int n) {
       }
     }
   } else {
-    cerr << "Error: 'Number' needs to be an integer greater than 1";
+    cerr << program << ": Error: input number needs to be an integer greater than 1" << endl;
     exit(1);
   }
 }
 
-int main() {
-  int n;
+/* usage of program */
+void usage(const char *program,bool error) {
+  if(error == false) {
+  } else {
+    cerr << "Usage: " << program << " [ -n | --number ]" << endl;
+  }
+}
 
-  cout << "Number: ";
-  cin >> n;  // user input
+int main(int argc,char* argv[]) {
+  int n;
   
-  sieve(n);
+  int c;
+  int optionIndex;
+  bool syntax;
+
+  syntax=false;
+
+  /* long options */
+  while(true) {
+    static struct option longOptions[] = {
+      {"help",1,0,HELP},
+      {"number",1,0,NUMBER},
+      {0,0,0,0}
+    };
+    
+    c=getopt_long_only(argc,argv,"n:",longOptions,&optionIndex);
+    
+    if(c == -1) {
+      break;
+    } 
+
+    /* short options */
+    switch(c) {
+    case 'n':
+      n=stoi(optarg);
+      break;
+    case NUMBER:
+      n=stoi(optarg);
+      break;
+    default:
+      syntax=true;
+      break;
+    }
+  }
+
+  /* syntax error message */
+  if(syntax == true || argc == 1) {
+    usage(argv[0],true);
+    cerr << endl << "Type '" << argv[0] << " -h' for a description of options." << endl;
+    return 1;
+  }
+  
+  sieve(n,argv[0]);
 
   return 0;
 }
