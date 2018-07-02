@@ -12,7 +12,7 @@ enum Parameters {
 };
 
 /* Sieve of Eratosthenes */
-void sieve(int n,const char *program) {
+void sieve(int n) {
   bool *a=new bool[n+1];
   
   for(int i=2; i <= n; i++) {
@@ -74,7 +74,7 @@ int main(int argc,char* argv[]) {
     case 'n':
       n=stoi(optarg);
       if(n>1) {
-	sieve(n,argv[0]);
+	sieve(n);
       } else {
 	cerr << argv[0] << ": error: input number needs to be an integer greater than 1." << endl;
 	return 1;
@@ -83,7 +83,7 @@ int main(int argc,char* argv[]) {
     case NUMBER:
       n=stoi(optarg);
       if(n>1) {
-	sieve(n,argv[0]);
+	sieve(n);
       } else {
 	cerr << argv[0] << ": error: input number needs to be an integer greater than 1." << endl;
 	return 1;
