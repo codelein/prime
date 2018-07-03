@@ -36,9 +36,12 @@ void sieve(int n) {
 
 /* usage of program */
 void usage(const char *program,bool error) {
-  if(error == false) {
+  const char *usageopts=" [-h] [-help] [-n NUMBER] [-number NUMBER]";
+
+  if(!error) {
+    cout << "Usage: " << program << usageopts << endl;
   } else {
-    cerr << program <<": Usage: " << program << " [-n NUMBER] [-number NUMBER]" << endl;
+    cerr << program <<": Usage: " << program << usageopts << endl;
   }
 }
 
@@ -51,8 +54,8 @@ int main(int argc,char* argv[]) {
 
   syntax=false;
 
-  /* long options */
   while(true) {
+    /* long options */
     static struct option longOptions[] = {
       {"help",0,0,HELP},
       {"number",1,0,NUMBER},
@@ -68,25 +71,16 @@ int main(int argc,char* argv[]) {
     /* short options */
     switch(c) {
     case 'h':
-      break;
     case HELP:
       break;
     case 'n':
-      n=stoi(optarg);
-      if(n>1) {
-	sieve(n);
-      } else {
-	cerr << argv[0] << ": error: input number needs to be an integer greater than 1." << endl;
-	return 1;
-      }
-      break;
     case NUMBER:
       n=stoi(optarg);
       if(n>1) {
 	sieve(n);
       } else {
 	cerr << argv[0] << ": error: input number needs to be an integer greater than 1." << endl;
-	return 1;
+	exit(-1);
       }
       break;
     default:
@@ -96,10 +90,10 @@ int main(int argc,char* argv[]) {
   }
 
   /* syntax error message */
-  if(syntax == true || argc == 1) {
+  if(syntax || argc == 1) {
     usage(argv[0],true);
     cerr << endl << "Type '" << argv[0] << " -help' for a description of options." << endl;
-    return 1;
+    exit(-1);
   }
 
   return 0;
