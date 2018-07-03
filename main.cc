@@ -6,8 +6,12 @@
 
 using namespace std;
 
+const char *PACKAGE="prime";
+const char *VERSION="0.0";
+
 enum Parameters {
   HELP=256,
+  VERS,
   NUMBER
 };
 
@@ -36,7 +40,7 @@ void sieve(int n) {
 
 /* usage of program */
 void usage(const char *program,bool error) {
-  const char *usageopts=" [-h] [-help] [-n NUMBER] [-number NUMBER]";
+  const char *usageopts=" [options] -n NUMBER";
 
   if(!error) {
     cout << "Usage: " << program << usageopts << endl;
@@ -58,6 +62,7 @@ int main(int argc,char* argv[]) {
     /* long options */
     static struct option longOptions[] = {
       {"help",0,0,HELP},
+      {"version",0,0,VERS},
       {"number",1,0,NUMBER},
       {0,0,0,0}
     };
@@ -66,12 +71,20 @@ int main(int argc,char* argv[]) {
     
     if(c == -1) {
       break;
-    } 
-
-    /* short options */
+    }
+    
     switch(c) {
-    case 'h':
     case HELP:
+      usage(argv[0],false);
+      cout << endl;
+      cout << "Where options include:" << endl;
+      cout << "        * `-h` | `-help` This help message." << endl;
+      cout << "        * `-v` | `-version` This is the version information." << endl;
+      cout << "        * `-n` | `-number` **Required** number for search limit." << endl;
+      cout << endl;
+      break;
+    case VERS:
+      cout << PACKAGE << " " << VERSION << endl;      
       break;
     case 'n':
     case NUMBER:
