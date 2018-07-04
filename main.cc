@@ -39,14 +39,10 @@ void sieve(int n) {
 }
 
 /* usage of program */
-void usage(const char *program,bool error) {
+void usage(const char *program) {
   const char *usageopts=" [options] -n NUMBER";
-
-  if(!error) {
-    cout << "Usage: " << program << usageopts << endl;
-  } else {
-    cerr << program <<": Usage: " << program << usageopts << endl;
-  }
+  
+  cerr << program <<": Usage: " << program << usageopts << endl;
 }
 
 int main(int argc,char* argv[]) {
@@ -75,16 +71,18 @@ int main(int argc,char* argv[]) {
     
     switch(c) {
     case HELP:
-      usage(argv[0],false);
+      usage(argv[0]);
       cout << endl;
       cout << "Where options include:" << endl;
       cout << "        * `-h` | `-help` This help message." << endl;
       cout << "        * `-v` | `-version` This is the version information." << endl;
       cout << "        * `-n` | `-number` **Required** number for search limit." << endl;
       cout << endl;
+      exit(-1);
       break;
     case VERS:
-      cout << PACKAGE << " " << VERSION << endl;      
+      cout << PACKAGE << " " << VERSION << endl;
+      exit(-1);
       break;
     case 'n':
     case NUMBER:
@@ -104,7 +102,7 @@ int main(int argc,char* argv[]) {
 
   /* syntax error message */
   if(syntax || argc == 1) {
-    usage(argv[0],true);
+    usage(argv[0]);
     cerr << endl << "Type '" << argv[0] << " -help' for a description of options." << endl;
     exit(-1);
   }
