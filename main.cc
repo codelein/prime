@@ -1,3 +1,23 @@
+////////////////////////////////////////////////////////////////////////////
+/*                                                                        */
+/* Prime, a program to calculate primes using the Sieve of Eratosthenes.  */
+/* Copyright (C) 2018 Philip Bowman.                                      */
+/*                                                                        */
+/* This program is free software: you can redistribute it and/or modify   */
+/* it under the terms of the GNU General Public License as published by   */
+/* the Free Software Foundation, either version 3 of the License, or      */
+/* (at your option) any later version.                                    */
+/*                                                                        */
+/* This program is distributed in the hope that it will be useful,        */
+/* but WITHOUT ANY WARRANTY; without even the implied warranty of         */
+/* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          */
+/* GNU General Public License for more details.                           */
+/*                                                                        */
+/* You should have received a copy of the GNU General Public License      */
+/* along with this program.  If not, see <https://www.gnu.org/licenses/>. */
+/*                                                                        */
+////////////////////////////////////////////////////////////////////////////
+
 #include <iostream>
 #include <string>
 #include <cmath>
@@ -6,7 +26,7 @@
 
 using namespace std;
 
-const char *PACKAGE="prime";
+const char *PACKAGE="Prime";
 const char *VERSION="0.0";
 
 enum Parameters {
@@ -45,6 +65,26 @@ void usage(const char *program) {
   cerr << program <<": Usage: " << program << usageopts << endl;
 }
 
+void help(const char *program) {
+  usage(program);
+  cerr << endl;
+  cerr << "Where options include:" << endl;
+  cerr << "        * `-h` | `-help` This help message." << endl;
+  cerr << "        * `-v` | `-version` This is the version information." << endl;
+  cerr << "        * `-n` | `-number` **Required** number for search limit." << endl;
+  cerr << endl;
+  exit(-1);
+}
+
+void version() {
+  cerr << PACKAGE << " " << VERSION << endl;
+  cerr << "Copyright (C) 2018 Philip Bowman." << endl;
+  cerr << "License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>" << endl;
+  cerr << "This is free software: you are free to change and redistribute it." << endl;
+  cerr << "There is NO WARRANTY, to the extent permitted by law." << endl;
+  exit(-1);
+}
+
 int main(int argc,char* argv[]) {
   int n;
   
@@ -71,18 +111,10 @@ int main(int argc,char* argv[]) {
     
     switch(c) {
     case HELP:
-      usage(argv[0]);
-      cout << endl;
-      cout << "Where options include:" << endl;
-      cout << "        * `-h` | `-help` This help message." << endl;
-      cout << "        * `-v` | `-version` This is the version information." << endl;
-      cout << "        * `-n` | `-number` **Required** number for search limit." << endl;
-      cout << endl;
-      exit(-1);
+      help(argv[0]);
       break;
     case VERS:
-      cout << PACKAGE << " " << VERSION << endl;
-      exit(-1);
+      version();
       break;
     case 'n':
     case NUMBER:
