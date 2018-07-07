@@ -3,7 +3,7 @@ Prime
 
 ## Version
 
-**Prime 0.0**
+**Prime 0.1**
 
 For better information when package is built type `prime -version`.
 

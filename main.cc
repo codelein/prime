@@ -27,7 +27,7 @@
 using namespace std;
 
 const char *PACKAGE="Prime";
-const char *VERSION="0.0";
+const char *VERSION="0.1";
 
 enum Parameters {
   HELP=256,
