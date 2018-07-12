@@ -1,6 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////
 /*                                                                        */
-/* Prime, a program to calculate primes using the Sieve of Eratosthenes.  */
+/* Prime, a package that calculates prime numbers using the Sieve of      */
+/* Eratosthenes.                                                          */
 /* Copyright (C) 2018 Philip Bowman.                                      */
 /*                                                                        */
 /* This program is free software: you can redistribute it and/or modify   */

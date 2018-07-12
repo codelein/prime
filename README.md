@@ -5,11 +5,11 @@ Prime
 
 **Prime 0.1**
 
-For better information when package is built type `prime -version`.
+For better information when the package is built type `prime -version`.
 
 ## Description
 
-Prime is a package that calculate primes using the Sieve of Eratosthenes.
+Prime is a package that calculates prime numbers using the Sieve of Eratosthenes.
 
 ## Install
 
@@ -17,7 +17,7 @@ Basic Intsall:
 
       * `make`
 
-Then after building Prime, type `prime` to test the program. You should be able too continue from there by following the instructions given to you. 
+Then after building Prime, type `prime` to test the program. You should be able to continue from there by following the instructions given to you. 
 
 ## Unusual Top-Level Directory Files
 
@@ -27,7 +27,7 @@ Files:
 
 ## License
 
-Prime, a program to calculate primes using the Sieve of Eratosthenes.
+Prime, a package that calculates prime numbers using the Sieve of Eratosthenes.
 Copyright (C) 2018 Philip Bowman.
 
 This program is free software: you can redistribute it and/or modify
