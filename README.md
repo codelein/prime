@@ -9,7 +9,7 @@ For better information when package is built type `prime -version`.
 
 ## Description
 
-Prime is a package that calculates prime numbers using the Sieve of Eratosthenes Algorithm.
+Prime is a package that calculate primes using the Sieve of Eratosthenes.
 
 ## Install
 
@@ -37,7 +37,7 @@ the Free Software Foundation, either version 3 of the License, or
 
 This program is distributed in the hope that it will be useful,
 but **WITHOUT ANY WARRANTY**; without even the implied warranty of
-**MERCHANTABILITY** or **FITNESS** FOR A **PARTICULAR PURPOSE**.  See the
+**MERCHANTABILITY** or **FITNESS FOR A PARTICULAR PURPOSE**.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
