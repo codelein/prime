@@ -120,12 +120,15 @@ int main(int argc,char* argv[]) {
     case 'n':
     case NUMBER:
       n=stoi(optarg);
+      
       if(n>1) {
 	sieve(n);
       } else {
+	
 	cerr << argv[0] << ": error: input number needs to be an integer greater than 1." << endl;
 	exit(-1);
       }
+      
       break;
     default:
       syntax=true;
