@@ -61,7 +61,7 @@ void sieve(int n) {
 
 /* usage of program */
 void usage(const char *program) {
-  const char *usageopts=" [options] -n NUMBER";
+  const char *usageopts=" [options] -n <number>";
   
   cerr << program <<": Usage: " << program << usageopts << endl;
 }
