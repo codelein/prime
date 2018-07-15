@@ -15,7 +15,7 @@ Prime is a package that calculates prime numbers using the Sieve of Eratosthenes
 
 Basic Intsall:
 
-      *  `make`
+      * `make`
 
 Then after building Prime, type `prime` to test the program. You should be able to continue from there by following the instructions given to you. 
 
@@ -23,7 +23,7 @@ Then after building Prime, type `prime` to test the program. You should be able 
 
 Files:
 
-	*  `main.cc` c++ source code for program.
+	* `main.cc` c++ source code for program.
 
 ## License
 
