@@ -20,7 +20,6 @@
 ////////////////////////////////////////////////////////////////////////////
 
 #include <iostream>
-#include <string>
 #include <cmath>
 
 #include <getopt.h>
@@ -119,7 +118,7 @@ int main(int argc,char* argv[]) {
       break;
     case 'n':
     case NUMBER:
-      n=stoi(optarg);
+      n=atoi(optarg);
       
       if(n>1) {
 	sieve(n);
