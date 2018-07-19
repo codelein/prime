@@ -13,13 +13,17 @@ Prime is a package that calculates prime numbers using the Sieve of Eratosthenes
 
 ## Install
 
-Basic Intsall:
+# Basic Intall
 
-      * `make`
+Instructions:
+	
+	* Type `make` to compile the program.
 
-Then after building Prime, type `prime` to test the program. You should be able to continue from there by following the instructions given to you. 
+# Operation
 
-## Unusual Top-Level Directory Files
+Then after building, type `prime` to test the program. You should be able to continue from there by following the instructions given to you. 
+
+## Other Information
 
 Files:
 
@@ -41,4 +45,4 @@ but **WITHOUT ANY WARRANTY**; without even the implied warranty of
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
+along with this program.  If not, see [link](https://www.gnu.org/licenses/).
