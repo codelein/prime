@@ -1,35 +1,35 @@
 Prime
 =====
 
-## Version
+# Version
 
 **Prime 0.1**
 
 For better information when the package is built type `prime -version`.
 
-## Description
+# Description
 
 Prime is a package that calculates prime numbers using the Sieve of Eratosthenes.
 
-## Install
+# Install
 
-# Basic Intall
+## Basic Intall
 
 Instructions:
 	
 	* Type `make` to compile the program.
 
-# Operation
+## Operation
 
 Then after building, type `prime` to test the program. You should be able to continue from there by following the instructions given to you. 
 
-## Other Information
+# Other Information
 
 Files:
 
 	* `main.cc` c++ source code for program.
 
-## License
+# License
 
 Prime, a package that calculates prime numbers using the Sieve of Eratosthenes.
 Copyright (C) 2018 Philip Bowman.
