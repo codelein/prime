@@ -31,13 +31,13 @@ Files:
 
 ## Sources
 
-Wikipedia contributors, "Make (software)," *Wikipedia, The Free Encyclopedia*, https://en.wikipedia.org/w/index.php?title=Make_(software)&oldid=846578505 (accessed July 20, 2018).
+Wikipedia contributors, "Make (software)," _Wikipedia, The Free Encyclopedia_, https://en.wikipedia.org/w/index.php?title=Make_(software)&oldid=846578505 (accessed July 20, 2018).
 
-Wikipedia contributors, "Sieve of Eratosthenes," *Wikipedia, The Free Encyclopedia*, https://en.wikipedia.org/w/index.php?title=Sieve_of_Eratosthenes&oldid=848490795 (accessed July 20, 2018).
+Wikipedia contributors, "Sieve of Eratosthenes," _Wikipedia, The Free Encyclopedia_, https://en.wikipedia.org/w/index.php?title=Sieve_of_Eratosthenes&oldid=848490795 (accessed July 20, 2018).
 
 ## License
 
-Prime, a package that calculates prime numbers using the Sieve of Eratosthenes.
+Prime, a package that calculates prime numbers using the Sieve of Eratosthenes. 
 Copyright (C) 2018 Philip Bowman.
 
 This program is free software: you can redistribute it and/or modify
