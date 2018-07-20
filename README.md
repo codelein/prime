@@ -29,6 +29,14 @@ Files:
 
 	* `main.cc` c++ source code for program.
 
+## Credits
+
+## Sources
+
+Wikipedia contributors, "Make (software)," *Wikipedia, The Free Encyclopedia*, https://en.wikipedia.org/w/index.php?title=Make_(software)&oldid=846578505 (accessed July 20, 2018).
+
+Wikipedia contributors, "Sieve of Eratosthenes," *Wikipedia, The Free Encyclopedia*, https://en.wikipedia.org/w/index.php?title=Sieve_of_Eratosthenes&oldid=848490795 (accessed July 20, 2018).
+
 ## License
 
 Prime, a package that calculates prime numbers using the Sieve of Eratosthenes.
