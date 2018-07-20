@@ -29,8 +29,6 @@ Files:
 
 	* `main.cc` c++ source code for program.
 
-## Credits
-
 ## Sources
 
 Wikipedia contributors, "Make (software)," *Wikipedia, The Free Encyclopedia*, https://en.wikipedia.org/w/index.php?title=Make_(software)&oldid=846578505 (accessed July 20, 2018).
