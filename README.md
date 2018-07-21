@@ -16,8 +16,8 @@ Prime is a package that calculates prime numbers using the Sieve of Eratosthenes
 ### Basic Intall
 
 Instructions:
-	
-	* Type `make` to compile the program.
+
+- Type `make` to compile the program.
 
 ### Operation
 
