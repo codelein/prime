@@ -31,7 +31,7 @@ PROGRAM=prime
 CXX_FILES := $(wildcard *.cc)
 OBJS := $(patsubst %.cc,%.o,$(CXX_FILES))
 CXX=c++
-CXXFLAGS=-g
+CXXFLAGS=-g -Wall -pedantic
 LDFLAGS=
 LDLIBS=-lm
 
