@@ -103,16 +103,18 @@ int main(int argc,char* argv[]) {
       {0,0,0,0}
     };
     
-    c=getopt_long_only(argc,argv,"n:",longOptions,&optionIndex);
+    c=getopt_long_only(argc,argv,"hvn:",longOptions,&optionIndex);
     
     if(c == -1) {
       break;
     }
     
     switch(c) {
+    case 'h':
     case HELP:
       help(argv[0]);
       break;
+    case 'v':
     case VERS:
       version();
       break;
