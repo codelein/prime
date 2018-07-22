@@ -57,9 +57,10 @@ depend:.depend
 	$(CXX) $(CXXFLAGS) $< -o $@
 
 clean:
-	rm -f $(OBJS) .depend
+	rm -f $(OBJS)
+	rm -f .depend
 
-distclean:
-	rm -f $(PROGRAM) $(OBJS) .depend
+distclean:clean
+	rm -f $(PROGRAM)
 
 .PHONY:depend clean distclean
