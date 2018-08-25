@@ -71,7 +71,7 @@ void help(const char *program) {
   cerr << endl;
   cerr << "Where options include:" << endl;
   cerr << "* `-h` | `-help` This help message." << endl;
-  cerr << "* `-v` | `-version` This is the version information." << endl;
+  cerr << "* `-v` | `-version` Version information." << endl;
   cerr << "* `-n` | `-number` **Required** number for search limit." << endl;
   cerr << endl;
   exit(-1);
