@@ -27,7 +27,7 @@
 using namespace std;
 
 const char *PACKAGE="Prime";
-const char *VERSION="0.1";
+const char *VERSION="v0.1";
 
 enum Parameters {
   HELP=256,
@@ -65,17 +65,19 @@ void usage(const char *program) {
   cerr << program <<": Usage: " << program << usageopts << endl;
 }
 
+/* help message */
 void help(const char *program) {
   usage(program);
   cerr << endl;
   cerr << "Where options include:" << endl;
-  cerr << "        * `-h` | `-help` This help message." << endl;
-  cerr << "        * `-v` | `-version` This is the version information." << endl;
-  cerr << "        * `-n` | `-number` **Required** number for search limit." << endl;
+  cerr << "* `-h` | `-help` This help message." << endl;
+  cerr << "* `-v` | `-version` This is the version information." << endl;
+  cerr << "* `-n` | `-number` **Required** number for search limit." << endl;
   cerr << endl;
   exit(-1);
 }
 
+/* version message */
 void version() {
   cerr << PACKAGE << " " << VERSION << endl;
   cerr << "Copyright (C) 2018 Philip Bowman." << endl;
@@ -108,7 +110,8 @@ int main(int argc,char* argv[]) {
     if(c == -1) {
       break;
     }
-    
+
+    /* short options */
     switch(c) {
     case 'h':
     case HELP:
