@@ -29,6 +29,8 @@ Files:
 
 * `main.cc` c++ source code for program.
 
+If you have encountered a bug, please report it to [Issues](https://github.com/codelein/prime/issues).
+
 ## Sources
 
 Wikipedia contributors, "Make (software)," _Wikipedia, The Free Encyclopedia_, https://en.wikipedia.org/w/index.php?title=Make_(software)&oldid=846578505 (accessed July 20, 2018).

@@ -74,6 +74,7 @@ void help(const char *program) {
   cerr << "* '-v' | '-version' Version information." << endl;
   cerr << "* '-n' | '-number' **Required** number for search limit." << endl;
   cerr << endl;
+  cerr << "Report bugs to: <https://github.com/codelein/prime/issues>" << endl;
   exit(-1);
 }
 
